@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+        <script src="tether.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+
+        </script>
+
+        <title> Mi Portfolio de Aventuras</title>
+
+        <script type="text/javascript">
+          function chocolate() {
+            document.getElementById('chocolate').style.display='block';
+            document.getElementById('chocobtn').style.visibility='hidden';
+            document.getElementById('nochoco').style.visibility='visible';
+
+          }
+
+          function nochoco(){
+            document.getElementById('chocolate').style.display='none';
+            document.getElementById('chocobtn').style.visibility='visible';
+            document.getElementById('nochoco').style.visibility='hidden';
+          }
+
+          var counter=0;
+          function message() {
+            counter= Math.floor(Math.random() * 10);
+            document.getElementById('message').style.display="block";
+            for (j = 0; j < 10; j++){
+              document.getElementById(''+j).style.display="none";
+            }
+            for (i = 0; i < 10; i++) {
+              if (i == counter){
+                document.getElementById(''+i).style.display="block";
+              }
+            }
+          }
+        </script>
+    </head>
+    <body>
+        <div class= "header">
+            <p>
+                <strong><span class="longmotto"><img class="logo" src="https://previews.123rf.com/images/enterphoto/enterphoto1707/enterphoto170700172/82261390-leaf-icon-vector-logo-nature-concept.jpg" alt="logotip"> Las aventuras de Genia</span><span class="shortmotto">Construyendo caminos</span></strong>
+            </p>
+        </div>
+        <table id="index">
+            <tr>
+                <th><a href="index.html">Home</a></th>
+                <th><a href="adventures.html"> Aventuras</a></th>
+                <!-- <th><a href="blog">Blog</a></th> -->
+                <th><a href="about.html">Sobre Genia</a></th>
+                <th><a href="contact.html">Contactanos</a></th>
+                <th><a href="reward.html">???</a></th>
+            </tr>
+        </table>
+
+        <button type="button" onclick="message()" class="btn btn-light">Para mi Malyshka <3 </button>
+        <button type="button" id="chocobtn" onclick="chocolate()" class="btn btn-danger">Quiero Chocolate!</button>
+        <button type="button" id="nochoco" onclick="nochoco()" style="visibility:hidden" class="btn btn-success">No mas chocolate</button>
+
+        <div id="message">
+          <p id="0">Hola preciosa mia :)</p>
+          <p id="1">Priviet Malyshka</p>
+          <p id="2">Eres muy buena</p>
+          <p id="3">Ty moya haroshaya malyshka</p>
+          <p id="4">Te quiero <3</p>
+          <p id="5">Ya tibie lublu <3</p>
+          <p id="6">Estas muy guapa hoy</p>
+          <p id="7">Ty krasivaya</p>
+          <p id="8">Eres guapa y buena malyshka</p>
+          <p id="9">Mi churri !</p>
+        </div>
+
+        <img src="chocolate.gif" alt="gif de chocolate siendo deborado" id="chocolate">
+
+
+
+    </body>
+</html>
